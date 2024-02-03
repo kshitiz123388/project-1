@@ -1,0 +1,627 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allison&display=swap');
+* {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root{
+  --dark-blue: #0A1D3C;
+  --light-gray: #E5E5E5;
+  --white: #FFF;
+  --light-peach: #F9E3BC;
+  --dark-gray: #3E3F43;
+  --light-black: #1D1D1D;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+/* --- SECTION 1 STARTS --- */
+
+.section{
+    min-height: 100vh;
+    width: 100%;
+}
+
+nav{
+    width:80%;
+    height: 13vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+
+header{
+    width: 80%;
+    height: calc(100vh - 13vh);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+.navlinks{
+    display: flex;
+}
+
+.header-image{
+    width: 38rem;
+}
+
+.logo{
+    font-size: 3.2rem;
+    font-family: 'Allison', cursive; 
+    color: var(--dark-blue);
+}
+
+.navlinks li{
+    list-style: none;
+}
+.navlinks li a{
+    text-decoration: none;
+    margin-left: 2.5rem;
+    color: var(--dark-gray);
+    font-size: 1rem;
+    letter-spacing: 0.03rem;
+    position: relative;
+}
+.header-heading{
+    font-size: 5rem;
+    position: relative;
+}
+
+.header-heading::before{
+    content: "New";
+    position: absolute;
+    top: -60px;
+    color: var(--dark-blue);
+    font-family: 'Allison', cursive; 
+}
+
+.product-name{
+    font-size: 1.7rem;
+}
+
+.header-pricing{
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.btn-container{
+    display: flex;
+    margin-top: 2rem;
+}
+
+.primary-btn, .secondary-btn{
+    font-size: 1.1rem;
+    border: none;
+    padding: 1rem 1.7rem;
+    transition: transform 0.5s ease;
+}
+
+.primary-btn{
+  background-color: var(--light-gray);
+}
+
+.secondary-btn{
+    background-color: var(--dark-blue);
+    color: var(--white);
+    transform: scale(1.1);
+}
+
+.primary-btn:hover, .section-two-btn:hover, .section-four-btn:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.secondary-btn:hover{
+    transform: scale(1);
+}
+
+
+.navlinks li a::after , .navlinks li .active::after{
+    content: "";
+    background-color: var(--dark-gray);
+    position: absolute;
+    height: .15rem;
+    width: 100%;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+    transform-origin: right;
+}
+
+.navlinks li a:hover::after, .navlinks li .active::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.line{
+    background-color: var(--dark-gray);
+    width: 2.5rem;
+    height: 0.2rem;
+    margin: 0.38rem;
+}
+
+.hamburger{
+    cursor: pointer;
+    display: none;
+}
+
+/* --- SECTION 1 ENDS --- */
+
+/* --- SECTION 1 STARTS --- */
+
+.section-two{
+    display: flex;
+    align-items: center;
+    transform: skewY(-6deg);
+}
+
+.section-two-container{
+    background-color: var(--light-peach);
+    width: 100%;
+    height: 50vh;
+}
+
+.section-two-image{
+    width: 28rem;
+}
+
+.section-two-inner-container{
+    transform: skewY(6deg);
+    width: 80%;
+    margin: auto;
+}
+
+.section-two-container, .section-two-inner-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.section-two-heading{
+    color: var(--dark-gray);
+    font-size: 4rem;
+}
+
+.section-two-para{
+    font-size: 1rem;
+    color: var(--dark-gray);
+    line-height: 1.8rem;
+    max-width: 80%;
+}
+
+.section-two-pricing{
+    font-size: 1.6rem;
+    color: var(--dark-gray);
+    margin: 0.9rem 0;
+}
+
+.section-two-btn{
+    padding: 0.9rem 1.7rem;
+    border: 0.1rem solid var(--light-black);
+    background-color: transparent;
+    transition: transform 0.5s ease;
+}
+
+.section-two-btn:hover{
+    color: white;
+    background-color: #264653;
+    transition: all 0.3s linear;
+    border: 0.1rem solid #264653;
+}
+
+/* <!-- SECTION 3 STARTS --> */
+.section-heading{
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+}
+
+.card-image{
+    width: 20rem;
+}
+
+.card{
+    background-color: var(--light-gray);
+    padding: 2rem;
+}
+
+.card-pricing{
+    font-size: 1.2rem;
+    margin-top: 0.2rem;
+    margin-bottom: 1.2rem;
+}
+
+/* --- section 4 ---  */
+
+.section-four{
+    display: flex;
+    align-items: center;
+}
+
+.section-four-container{
+    background-image: url("images/watch.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.section-four-offer{
+    font-size: 4rem;
+    color: var(--light-peach);
+    font-family: 'Allison', cursive; 
+    text-transform: uppercase;
+}
+
+.section-four-heading{
+    font-size: 4rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.section-four-btn{
+    font-size: 1.1rem;
+    padding: 1rem 1.7rem;
+    background-color: var(--light-peach);
+    border: none;
+    transition: transform 0.5s ease;
+}
+
+.section-four-container::before{
+    content: "";
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    inset: 0;
+}
+
+.section-four-container .content{
+    z-index: 5;
+}
+
+/*  --- Section 5 starts */
+
+.grid-card-container{
+    height: 80vh;
+    width: 60%;
+    margin: auto;
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-auto-rows: 15rem;
+}
+
+.grid-card{
+    background-color: var(--light-gray);
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.grid-card:nth-child(1){
+    grid-row: 1/4;
+    background-image: url("images/rado\ watch.jpg");
+}
+
+.grid-card:nth-child(2){
+    background-image: url("images/geneve\ watch.jpg");
+}
+
+.grid-card:nth-child(3){
+    grid-row: 1/3;
+    background-image: url("images/tissot\ watch.jpg");
+}
+
+.grid-card:nth-child(4){
+    grid-row: 3/4;
+    background-image: url("images/cartier\ watch.jpg");
+}
+
+.grid-card:nth-child(5){
+    background-image: url("images/omega\ watch.jpg");
+    
+}
+
+.grid-card:nth-child(6){
+    background-image: url("images/fitron\ watch.jpg");
+    
+}
+
+.grid-card::before{
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    inset: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 1s ease-in-out;
+}
+
+.grid-card:hover::before{
+    transform: scale(1);
+    transform-origin: left;
+}
+
+.grid-card::after{
+    content: attr(collection);
+    position: absolute;
+    text-transform: uppercase;
+    background-color: var(--light-peach);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem 1.7rem;
+    font-size: 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out;
+}
+
+.grid-card:hover::after{
+    opacity: 1;
+    visibility: visible;
+    cursor: pointer;
+}
+
+/* ---FOOTER STARTS */
+
+/* --- Footer --- */
+
+.footer{
+    background-color: var(--white);
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+
+hr{
+    width: 90%;
+    margin: 0 5%;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+}
+
+.footer-column{
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5rem;
+}
+
+.footer-column h3{
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--light-black);
+}
+
+.footer-column a{
+    text-decoration: none;
+    color: var(--light-black);
+    font-size: 0.8rem;
+}
+
+.footer-column p{
+    font-size: 0.8rem;
+}
+
+.footer-contact{
+    width: 300px;
+    left: 0;
+}
+
+.copyright{
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 0.85rem;
+    margin: 1rem 0;
+}
+
+.links{
+    display: flex;
+    align-items: center;
+}
+
+.links i{
+    margin: 0 0.4rem;
+}
+
+.inbox{
+    height: 7vh;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.inbox-input{
+    font-size: 0.85rem;
+    height: 100%;
+    padding: 0 0.57rem;
+    border: none;
+    background-color: var(--light-gray);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin-right: -4px;
+}
+
+.inbox-btn{
+    height: 100%;
+    padding: 0px 1rem;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: var(--white);
+    background-color: var(--light-black);
+}
+
+
+
+/* --- Media Queries --- */
+@media screen and (max-width: 500px){
+   
+   /* --SECTION 1-- */
+    .header-image{
+        display: none;
+    }
+    .navlinks{
+        /* display: none; */
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 100%;
+        background-color: var(--light-gray);
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        gap: 2rem;
+        transition: 0.5s ease-in-out;
+    }
+
+    .navlinks-active{
+        right: 0;
+    }
+
+    .navlinks li a{
+        font-size: 1.3rem;
+        margin-left: 0;
+    }
+
+    .hamburger{
+        display: block;
+        z-index: 5;
+    }
+
+    .header-heading{
+        font-size: 4rem;
+    }
+
+    .section .logo{
+        z-index: 5;
+    }
+
+    header{
+        justify-content: flex-start;
+    }
+
+    /* -- SECTION 2 -- */
+
+    .section-two-image{
+        display: none;
+    }
+
+    .section-two-heading{
+        font-size: 2.9rem;
+    }
+
+    .section-two-para{
+        font-size: 0.9rem;
+        max-width: 100%;
+    }
+
+    .section-two-pricing{
+        font-size: 1.4rem;
+    }
+
+    .section-two-btn{
+        font-size: 1rem;
+        padding: 0.6rem 1rem; 
+    }
+
+    .section-two-container{
+        height: 60vh;
+    }
+
+    .section-two-inner-container{
+        width: 90%;
+    }
+
+    /* SECTION 3  */
+    .card-image{
+        width: 16rem;
+    }
+
+    /* ---Section 4 starts */
+
+    .section-four{
+        font-size: 2.5rem;
+    }
+
+    .section-four-offer{
+        font-size: 3rem;
+    }
+
+    .section-four-heading{
+        font-size: 2.5rem;
+    }
+
+    .section-four-btn{
+        font-size: 1rem;
+    }
+
+    /* --Section 5 Starts */
+
+    .grid-card-container{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        width: 90%;
+    }
+
+    .grid-card:nth-child(1), .grid-card:nth-child(3){
+        grid-row: 1/2;
+    }
+
+    /* --footer--- */
+
+
+    .footer-column{
+        margin-bottom: 10%;
+    }
+
+   body .hr{
+    display: none;
+   }
+    body .copyright{
+        display: none;
+    }
+
+}
